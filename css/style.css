@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+   
+    animation: pipe-animation 1.5s infinite linear;
+    
+
+}
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+   
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clounds {
+    position: absolute;
+    width: 550px; 
+}
+
+.moveClounds {
+
+    animation: clounds-animation 10s infinite linear;
+
+}
+
+.UpDownClound {
+    animation: UpDownClound 2s infinite;
+}
+
+.pontuation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgb(209, 95, 1);
+    height: 100px;
+}
+
+h1 {
+    font-family: "Press Start 2P", system-ui;
+}
+
+#point {
+    position: relative;
+    left: 50px;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 150px;
+    }
+
+    50% {
+        bottom: 150px;
+    }
+    80% {
+        bottom: 150px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clounds-animation {
+    from {
+        right: -550px;
+    }
+    
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes UpDownClound {
+
+    0% {
+        top:10px;
+    }
+
+    50% {
+        top: 20px;
+
+    }
+
+    100% {
+        top: 10px;
+    }
+
+}
